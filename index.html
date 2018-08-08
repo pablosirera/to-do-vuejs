@@ -12,22 +12,24 @@
 
 <body>
   <main id="app">
-    <div class="create-task">
-      <form class="form" novalidate @submit="e => e.preventDefault()">
-        <input type="text" placeholder="Type your task" v-model="valueTask" class="input-task" />
-        <button type="submit" class="button-form" @click="onSubmitForm">Add</button>
-      </form>
-    </div>
-    <hr class="separator">
-    <div v-if="tasksList.length" class="list-tasks">
-      <p v-for="(task, index) in tasksList" :class="taskClass">
-        <input type="checkbox" class="checkbox" v-model="task.done" />
-        <span>{{ task.name }}</span>
-        <span class="remove-task" @click="onRemoveTask(index)">
-          <span>❌</span>
-        </span>
-      </p>
-    </div>
+    <section class="container">
+      <div class="create-task">
+        <form class="form" novalidate @submit="e => e.preventDefault()">
+          <input type="text" placeholder="Type your task" v-model="valueTask" class="input-task" />
+          <button type="submit" class="button-form" @click="onSubmitForm">Add</button>
+        </form>
+      </div>
+      <hr class="separator">
+      <div v-if="tasksList.length" class="list-tasks">
+        <p v-for="(task, index) in tasksList" :class="taskClass">
+          <input type="checkbox" class="checkbox" v-model="task.done" />
+          <span>{{ task.name }}</span>
+          <span class="remove-task" @click="onRemoveTask(index)">
+            <span>❌</span>
+          </span>
+        </p>
+      </div>
+    </section>
   </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>

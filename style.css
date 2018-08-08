@@ -2,6 +2,17 @@
 body {
   font-family: "Lato", sans-serif;
 }
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  border: 1px solid lightgrey;
+  box-shadow: 0px 0px 16px -2px;
+  width: 65%;
+}
 .create-task .form {
   display: flex;
   flex-direction: column;
@@ -44,6 +55,7 @@ body {
 .list-tasks {
   margin: 0 auto;
   width: 50%;
+  margin-bottom: 30px;
 }
 .task {
   display: flex;
