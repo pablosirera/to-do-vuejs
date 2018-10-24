@@ -1,10 +1,11 @@
 new Vue({
   el: "#app",
   data: () => ({
-    valueTask: '',
+    valueTask: undefined,
     tasksList: [
       { name: 'Read more about Vue', done: false },
-      { name: 'Buy food', done: true }
+      { name: 'Buy food', done: true },
+      { name: 'Learn AngularJS', done: false }
     ]
   }),
   computed: {
